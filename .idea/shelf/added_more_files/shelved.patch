@@ -1,0 +1,17 @@
+Index: app/src/main/java/com/codepath/apps/restclienttemplate/MyDatabase.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.codepath.apps.restclienttemplate;\n\nimport android.arch.persistence.room.Database;\nimport android.arch.persistence.room.RoomDatabase;\n\nimport com.codepath.apps.restclienttemplate.models.SampleModel;\nimport com.codepath.apps.restclienttemplate.models.SampleModelDao;\n\n@Database(entities={SampleModel.class}, version=1)\npublic abstract class MyDatabase extends RoomDatabase {\n    public abstract SampleModelDao sampleModelDao();\n\n    // Database name to be used\n    public static final String NAME = \"MyDataBase\";\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/codepath/apps/restclienttemplate/MyDatabase.java	(revision 537d2a3b40638d86d9304ac1d1ae9dcf03f6375f)
++++ app/src/main/java/com/codepath/apps/restclienttemplate/MyDatabase.java	(date 1553215910000)
+@@ -10,6 +10,6 @@
+ public abstract class MyDatabase extends RoomDatabase {
+     public abstract SampleModelDao sampleModelDao();
+ 
+-    // Database name to be used
++    // Database name to be usedhjhj
+     public static final String NAME = "MyDataBase";
+ }
