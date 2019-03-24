@@ -6,7 +6,7 @@
     density="420dpi"
     format="10"
     plugin-version="3.3.2"
-    timestamp="1553215331744"
+    timestamp="1553468456925"
     token="7395768988773372364"
     verifier="FULL_BUILD_REQUESTED" >
 
@@ -65,7 +65,7 @@
 
     <build
         build-mode="FULL"
-        timestamp="1553215331744"
+        timestamp="1553468456925"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="/Users/grissellopez/Desktop/CodePath/SimpleTweet/app/build/intermediates/split-apk/debug/slices/slice_0.apk"

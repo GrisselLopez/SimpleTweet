@@ -1,4 +1,4 @@
-#Thu Mar 21 18:53:12 EDT 2019
+#Sat Mar 23 15:51:05 EDT 2019
 base.0=/Users/grissellopez/Desktop/CodePath/SimpleTweet/app/build/intermediates/transforms/dexMerger/debug/5
 path.0=classes.dex
 renamed.0=classes.dex

@@ -3,7 +3,6 @@ package com.codepath.apps.restclienttemplate;
 import android.content.Context;
 
 import com.codepath.oauth.OAuthBaseClient;
-import com.github.scribejava.apis.FlickrApi;
 import com.github.scribejava.apis.TwitterApi;
 import com.github.scribejava.core.builder.api.BaseApi;
 import com.loopj.android.http.AsyncHttpResponseHandler;
@@ -24,8 +23,8 @@ import com.loopj.android.http.RequestParams;
 public class TwitterClient extends OAuthBaseClient {
 	public static final BaseApi REST_API_INSTANCE = TwitterApi.instance();
 	public static final String REST_URL = "https://api.twitter.com/1.1";
-	public static final String REST_CONSUMER_KEY = "4tTyZbeunrvUYBrR1iWmENYsa";
-	public static final String REST_CONSUMER_SECRET = "rM4NXNJvM6PkHpF0WZd98SjjFzMBT6An4rhfXpzcA5KcUjabQr";
+	public static final String REST_CONSUMER_KEY = "V6M1vV6ArLHKZ3CLXaFog4dBC";
+	public static final String REST_CONSUMER_SECRET = "VyEJAP93jRBympvJncrvcn0qUTj1Wy1pn9uuA1RyeraRwIIGnO";
 
 	// Landing page to indicate the OAuth flow worked in case Chrome for Android 25+ blocks navigation back to the app.
 	public static final String FALLBACK_URL = "https://codepath.github.io/android-rest-client-template/success.html";
@@ -51,6 +50,14 @@ public class TwitterClient extends OAuthBaseClient {
 		params.put("count", 20);
 		params.put("since_id", 1);
 		client.get(apiUrl, params, handler);
+	}
+
+	public void composeTweet(String tweetContent, AsyncHttpResponseHandler handler) {
+		String apiUrl = getApiUrl("statuses/update.json");
+		// Can specify query string params directly or through RequestParams.
+		RequestParams params = new RequestParams();
+		params.put("status", tweetContent);
+		client.post(apiUrl, params, handler);
 	}
 
 	/* 1. Define the endpoint URL with getApiUrl and pass a relative path to the endpoint
